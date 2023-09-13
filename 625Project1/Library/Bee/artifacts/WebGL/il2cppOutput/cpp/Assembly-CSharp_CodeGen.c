@@ -1,0 +1,89 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void Enemy_Awake_mB58E74200229275689E6D9ADCDB6443D4E426624 (void);
+extern void Enemy_Start_m8BBD9A5AE10A27ABDFCD9168B93CD9C69D229034 (void);
+extern void Enemy_Update_m4149CFC3AC081AF0D654D9BDB6BC9B5540CE03D8 (void);
+extern void Enemy__ctor_mB6697627910F785A971C20C671DEFBA9D921D933 (void);
+extern void MainMenu_Start_m1729BDE6D096D9F4C92DBE72B392BA89E9A9ECAD (void);
+extern void MainMenu_PlayGame_mEC2DA4274CDD4D658AE27480E2C70C6049A496B5 (void);
+extern void MainMenu__ctor_m8209CEC1D907C87A96D777961F4D0536E6E948DD (void);
+extern void PacmanScript_Awake_mBAB3F3B4FD76B2ED962C6DFE6947A929075918AD (void);
+extern void PacmanScript_Start_m251046692D5BA1975B0E4517AEA5A60121586491 (void);
+extern void PacmanScript_Update_m96316379D49FB886F75B3290C53D2EAD8C88313F (void);
+extern void PacmanScript_OnTriggerEnter_mAF9E254E07F3E5D90F95ABCD8327F1BA64C2F377 (void);
+extern void PacmanScript_empoweredTimerManager_mF78271E44B5FD47428433D4851DD9108A74511A6 (void);
+extern void PacmanScript_gameEnd_mC5EDF32F9EBC9CA60B10D403B9C4A69253ADCDE1 (void);
+extern void PacmanScript__ctor_m9CB5F3519E866BB9E8EF41F70470614DFE0CD196 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
+static Il2CppMethodPointer s_methodPointers[16] = 
+{
+	Enemy_Awake_mB58E74200229275689E6D9ADCDB6443D4E426624,
+	Enemy_Start_m8BBD9A5AE10A27ABDFCD9168B93CD9C69D229034,
+	Enemy_Update_m4149CFC3AC081AF0D654D9BDB6BC9B5540CE03D8,
+	Enemy__ctor_mB6697627910F785A971C20C671DEFBA9D921D933,
+	MainMenu_Start_m1729BDE6D096D9F4C92DBE72B392BA89E9A9ECAD,
+	MainMenu_PlayGame_mEC2DA4274CDD4D658AE27480E2C70C6049A496B5,
+	MainMenu__ctor_m8209CEC1D907C87A96D777961F4D0536E6E948DD,
+	PacmanScript_Awake_mBAB3F3B4FD76B2ED962C6DFE6947A929075918AD,
+	PacmanScript_Start_m251046692D5BA1975B0E4517AEA5A60121586491,
+	PacmanScript_Update_m96316379D49FB886F75B3290C53D2EAD8C88313F,
+	PacmanScript_OnTriggerEnter_mAF9E254E07F3E5D90F95ABCD8327F1BA64C2F377,
+	PacmanScript_empoweredTimerManager_mF78271E44B5FD47428433D4851DD9108A74511A6,
+	PacmanScript_gameEnd_mC5EDF32F9EBC9CA60B10D403B9C4A69253ADCDE1,
+	PacmanScript__ctor_m9CB5F3519E866BB9E8EF41F70470614DFE0CD196,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+};
+static const int32_t s_InvokerIndices[16] = 
+{
+	4430,
+	4430,
+	4430,
+	4430,
+	4430,
+	4430,
+	4430,
+	4430,
+	4430,
+	4430,
+	3567,
+	4430,
+	4430,
+	4430,
+	6373,
+	4430,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	16,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

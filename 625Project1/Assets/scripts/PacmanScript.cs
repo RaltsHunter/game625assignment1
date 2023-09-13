@@ -12,16 +12,29 @@ public class PacmanScript : MonoBehaviour
     public float timer = 0;
     public float score = 0;
     public TMP_Text scoreCount;
+    public TMP_Text uiText;
+    public TMP_Text lifeCount;
     public bool isEmpowered = false;
     public float timerReload = 10;
     private int acabMultiplier = 1;
-
-
+    public bool gameOver;
+    //Renderer render;
+    //public Material mat;
+    //public Material defaultMat;
+    public Vector3 startPosition;
+    public float lives = 3;
+    public bool copHit;
+    
+    private void Awake()
+    {
+        startPosition = transform.position;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameOver = false;
+        copHit = false;
     }
 
     // Update is called once per frame
@@ -33,8 +46,51 @@ public class PacmanScript : MonoBehaviour
         gameObject.transform.Rotate(0, rSpeed * Time.deltaTime * hAxis, 0);
         //checking for empowered
         if (isEmpowered) empoweredTimerManager();
-    }
+        
+        //empowering conditions
+        if (isEmpowered)
+        {
+            mSpeed = 4;
+            rSpeed = 200;
+            //render.material = mat;
+        }
+        else
+        {
+            mSpeed = 3;
+            rSpeed = 150;
+            //render.material = defaultMat;
+        }
 
+        //win text
+        if (GameObject.FindGameObjectsWithTag("pizza").Length <= 0)
+        {
+            uiText.text = "You collected all the pizzas! You win!";
+            gameOver = true;
+        }
+
+        //calling the gameEnd function
+        gameEnd();
+
+        //resetting the game
+        if (Input.GetKeyDown ("r"))
+        {
+            if (lives <= 0)
+            {
+                // WOW, NOTHING
+            }
+            else {
+                transform.position = startPosition;
+                Debug.Log("Game Reset.");
+                gameOver = false;
+                uiText.text = "";
+                lives --;
+                copHit = false;
+            }
+        }
+
+        //life text
+        lifeCount.text = lives.ToString();
+    }
 
     private void OnTriggerEnter(Collider other)
      {
@@ -59,13 +115,29 @@ public class PacmanScript : MonoBehaviour
         }
         if (isEmpowered && other.CompareTag("cop"))
         {
-            //destroy cop?
+            Destroy(other.gameObject);
+            //other.gameObject.transform.position = new Vector3(0, -10, 0);
+            copHit = true;
             score = score + (10 * acabMultiplier);
             acabMultiplier++;
             scoreCount.text = score.ToString();
         }
 
-     }
+        if (isEmpowered == false && other.CompareTag("cop"))
+        {
+            if (lives <= 0)
+            {
+                uiText.text = "Out of Lives! Game Over.";
+                gameOver = true;
+            }
+            else
+            {
+                uiText.text = "Busted! Press R to Reset.";
+                gameOver = true;
+            }
+        }
+
+    }
 
     private void empoweredTimerManager()
      {
@@ -74,7 +146,18 @@ public class PacmanScript : MonoBehaviour
         {
             isEmpowered = false;
             acabMultiplier = 1;
+
         }
      }
+
+    private void gameEnd()
+    {
+        if (gameOver == true)
+        {
+            mSpeed = 0;
+        }
+    }
+
+
 
     }
