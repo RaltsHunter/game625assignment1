@@ -16,3 +16,5 @@ Police Car by Quaternius
 Pizza Slice by Quaternius
 
 Gas Can by Quaternius
+
+Large Building by Kenney
